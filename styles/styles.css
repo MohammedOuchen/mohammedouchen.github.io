@@ -107,6 +107,13 @@ section {
   justify-content: center;
   transform: translateY(-50%);
 }
+.controlls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controlls .active-btn i {
+  color: var(--color-white) !important;
+}
 .controlls .control {
   padding: 1rem;
   cursor: pointer;
@@ -119,4 +126,9 @@ section {
   justify-self: flex;
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
+}
+.controlls .control i {
+  font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
 }/*# sourceMappingURL=styles.css.map */
