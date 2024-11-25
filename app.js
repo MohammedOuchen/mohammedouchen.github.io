@@ -43,6 +43,29 @@ function PageTransition (){
         let element = document.body
         element.classList.toggle('light-mode')
     })
+
+
+    document.getElementById("send-email").addEventListener("click", function () {
+        // Récupérer les valeurs du formulaire
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Valider les champs
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+
+        // Construire l'URL mailto
+        const mailtoLink = `mailto:mohammed.ouchen@outlook.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        )}`;
+
+        // Ouvrir le client de messagerie
+        window.location.href = mailtoLink;
+    });
 }
 
 PageTransition()
