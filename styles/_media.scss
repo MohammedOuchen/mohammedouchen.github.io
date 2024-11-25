@@ -229,6 +229,11 @@
         padding: 7rem 3rem;
     }
 
+    header{
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+
     .about-stats {
         .progress-bars {
             grid-template-columns: 1fr;
